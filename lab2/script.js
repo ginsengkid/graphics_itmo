@@ -123,7 +123,7 @@ function drawVectors(){
 slider.querySelector("input").addEventListener("input", event => {
     approximation = event.target.value;
     drawB();
-    sliderValue.innerHTML = `Approximation step: ${approximation}`;
+    sliderValue.innerHTML = `Approximation: ${approximation}`;
 });
 
 function clearCanv(){
