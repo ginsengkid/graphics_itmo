@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="padding-left: 50px;">
+    <h1>lab3 Golovin Valerii P34682</h1>
+    <h3>По нажатию "upload image" появятся картинки.<br>
+        Вы можете изменить яркость и контрастность изображения, поменяв соотвествующее значение на слайдере и нажав кнопку.<br>
+        Также можно увидеть каждую картинку в инвертированном виде. Для этого измените нужные параметры и нажмите одну из кнопок под полем "Inverse"
+    </h3>
+
+    <div style="display: flex">
+        <div style=" width: 300px">
+            <h2>Picture</h2>
+            <canvas id="canvasPic" width="300" height="300" style="border: 1px solid black;"></canvas>
+            <button onclick="UploadIMG();" style="width: 300px; margin: 0 auto;">Upload image</button>
+        </div>
+
+        <div style="width: 300px; margin-left: 50px;">
+            <h2>Brightness</h2>
+            <canvas id="canvasBrightness" width="300" height="300" style="border: 1px solid black; display: inline-block; "></canvas>
+            <div class="length range__slider1" data-min="4" data-max="32" style="display: inline-block; text-align: center;">
+                <input id="BrightnessSlider" type="range" min="1" max="500" style="width: 300px"/>
+            </div>
+            <button onclick="BrightnessIMG();" style="width: 300px; margin: 0 auto;">Change Brightness</button>
+        </div>
+
+        <div style="width: 300px; margin-left: 50px;">
+            <h2>Contrast</h2>
+            <canvas id="canvasContrast" width="300" height="300" style="border: 1px solid black; display: inline-block;"></canvas>
+            <div class="length range__slider2" data-min="4" data-max="32" style="display: inline-block; text-align: center;">
+                <input id="ContrastSlider" type="range" min="1" max="200" style="width: 300px"/>
+            </div>
+            <button onclick="ContrastIMG();" style="width: 300px; margin: 0 auto;">Change contrast</button>
+        </div>
+
+        <div style="width: 300px; margin-left: 50px;">
+            <h2>Inverse</h2>
+            <canvas id="canvasInversion" width="300" height="300" style="border: 1px solid black; display: inline-block;"></canvas>
+            <button onclick="InverseDefaultIMG();" style="width: 80px; margin-right: 26px;">default image</button>
+            <button onclick="InverseBrightnessIMG();" style="width: 80px; margin-right: 26px;">brightness image</button>
+            <button onclick="InverseContrastIMG();" style="width: 80px; margin: 0 auto;">contrast image</button>
+        </div>
+    </div>
+
+    <div style="display: flex; margin-top: 50px;">
+        <div style="width: 300px;">
+            <canvas id="canvasDefaultHist" width="300" height="300" style="border: 1px solid black; display: inline-block;"></canvas>
+        </div>
+        <div style="width: 300px; margin-left: 50px;">
+            <canvas id="canvasBrightnessHist" width="300" height="300" style="border: 1px solid black; display: inline-block;"></canvas>
+        </div>
+        <div style="width: 300px; margin-left: 50px;">
+            <canvas id="canvasContrastHist" width="300" height="300" style="border: 1px solid black; display: inline-block;"></canvas>
+        </div>
+        <div style="width: 300px; margin-left: 50px;">
+            <canvas id="canvasInversionHist" width="300" height="300" style="border: 1px solid black; display: inline-block;"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
